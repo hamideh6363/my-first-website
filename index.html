@@ -1,12 +1,116 @@
+
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اولین وب سایت من</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ÉLÉA PARFUMS — The Art of Being Remembered</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f6f1e8;color:#342b24;font-family:'DM Sans',sans-serif}
+header{height:88px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e8dfd1}
+.logo{font-family:'Cormorant Garamond',serif;font-size:27px;letter-spacing:5px}
+nav{display:flex;gap:35px}
+nav a,.menu a{color:#51463a;text-decoration:none;font-size:11px;letter-spacing:2px}
+.menu{display:flex;gap:24px}
+.hero{min-height:calc(100vh - 88px);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:50px 9%;overflow:hidden}
+.copy{padding-left:5%;z-index:2}
+.eyebrow{font-size:10px;letter-spacing:4px;color:#a78c61;margin-bottom:28px}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(58px,7vw,100px);font-weight:400;line-height:.94;letter-spacing:-2px}
+h1 em{font-weight:400;color:#a88b5c}
+.description{max-width:370px;font-size:13px;line-height:2;color:#827568;margin:30px 0}
+.button{display:inline-block;padding:16px 30px;background:#a88b5c;color:white;text-decoration:none;font-size:10px;letter-spacing:2px;transition:.3s}
+.button:hover{background:#78603c;transform:translateY(-2px)}
+.visual{height:580px;display:flex;align-items:center;justify-content:center;position:relative;perspective:1100px}
+.glow{position:absolute;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle,#e9ddc7 0%,#f1e9dc 48%,transparent 72%)}
+.bottle-wrap{width:230px;height:390px;position:relative;z-index:2;transform-style:preserve-3d;cursor:grab;animation:float 5s ease-in-out infinite;transition:transform .15s ease-out}
+.bottle-wrap:active{cursor:grabbing}
+.bottle{position:absolute;bottom:0;left:15px;width:200px;height:285px;border-radius:30px 30px 24px 24px;background:linear-gradient(100deg,rgba(255,255,255,.8),rgba(220,207,185,.35) 22%,rgba(255,255,255,.65) 48%,rgba(191,169,135,.25) 75%,rgba(255,255,255,.7));border:1px solid rgba(174,151,116,.65);box-shadow:inset 8px 0 15px rgba(255,255,255,.8),inset -8px 0 18px rgba(150,125,90,.12),0 30px 45px rgba(87,66,38,.16);transform:translateZ(12px)}
+.bottle:before{content:"";position:absolute;left:12px;top:18px;width:12px;height:225px;border-radius:20px;background:rgba(255,255,255,.5);filter:blur(5px)}
+.bottle:after{content:"";position:absolute;left:0;right:0;bottom:0;height:35px;background:linear-gradient(90deg,rgba(177,151,111,.2),rgba(255,255,255,.7),rgba(177,151,111,.2));border-radius:0 0 24px 24px}
+.neck{position:absolute;bottom:280px;left:83px;width:64px;height:38px;background:linear-gradient(90deg,#9d7a45,#f5e4b8,#b28d54);border:1px solid #b99a65;transform:translateZ(10px)}
+.cap{position:absolute;bottom:315px;left:68px;width:94px;height:70px;border-radius:9px 9px 5px 5px;background:linear-gradient(90deg,#927044,#e7d2a1 30%,#fff0ca 52%,#b18b50 100%);box-shadow:inset 5px 0 8px rgba(255,255,255,.5),0 8px 12px rgba(70,50,20,.18);transform:translateZ(12px)}
+.label{position:absolute;top:100px;left:20px;width:160px;text-align:center;padding:23px 5px 17px;border-top:1px solid rgba(169,139,89,.6);border-bottom:1px solid rgba(169,139,89,.6);transform:translateZ(15px);background:rgba(246,241,232,.32)}
+.label strong{display:block;font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;letter-spacing:4px}
+.label span{display:block;font-size:7px;letter-spacing:3px;margin-top:9px;color:#8e7650}
+.shadow{position:absolute;bottom:35px;width:250px;height:32px;background:rgba(89,67,40,.16);filter:blur(18px);border-radius:50%}
+.side-text{position:absolute;right:1%;bottom:60px;writing-mode:vertical-rl;font-size:9px;letter-spacing:4px;color:#a28b6c}
+.scroll{position:absolute;bottom:30px;left:9%;font-size:9px;letter-spacing:3px;color:#9c8b77}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -13px}}
+@media(max-width:760px){
+header{height:72px;padding:0 6%}
+nav{display:none}
+.logo{font-size:21px}
+.hero{grid-template-columns:1fr;padding:65px 7% 30px;text-align:center}
+.copy{padding:0}
+.description{margin:25px auto}
+.visual{height:460px;grid-row:1}
+.bottle-wrap{transform:scale(.85)}
+.glow{width:310px;height:310px}
+.side-text,.scroll{display:none}
+}
+</style>
 </head>
 <body>
-    <h1>سلام! به اولین وب سایت من خوش آمدید ❤️</h1>
-    <p>من دارم طراحی سایت با هوش مصنوعی را یاد می‌گیرم.</p>
+<header>
+  <div class="logo">ÉLÉA</div>
+  <nav>
+    <a href="#collection">COLLECTION</a>
+    <a href="#story">OUR STORY</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+  <div class="menu"><a href="#collection">DISCOVER</a></div>
+</header>
+
+<main class="hero" id="story">
+  <section class="copy">
+    <div class="eyebrow">THE ESSENCE OF ELEGANCE</div>
+    <h1>The Art of<br><em>Being</em><br>Remembered.</h1>
+    <p class="description">A fragrance is more than a scent. It is a memory, an emotion, a quiet expression of who you are.</p>
+    <a class="button" href="#collection">DISCOVER THE SCENT &nbsp; ↗</a>
+  </section>
+
+  <section class="visual" id="collection">
+    <div class="glow"></div>
+    <div class="shadow"></div>
+    <div class="bottle-wrap" id="bottle">
+      <div class="cap"></div>
+      <div class="neck"></div>
+      <div class="bottle">
+        <div class="label">
+          <strong>ÉLÉA</strong>
+          <span>PARFUMS</span>
+          <span>EAU DE PARFUM</span>
+        </div>
+      </div>
+    </div>
+    <div class="side-text">A SIGNATURE OF YOUR OWN</div>
+  </section>
+</main>
+<div class="scroll">SCROLL TO EXPLORE &nbsp; ↓</div>
+
+<script>
+const bottle=document.getElementById('bottle');
+const visual=document.querySelector('.visual');
+let dragging=false,startX=0,startY=0,rotationY=0,rotationX=0;
+
+visual.addEventListener('pointerdown',e=>{
+  dragging=true;startX=e.clientX;startY=e.clientY;
+  visual.setPointerCapture(e.pointerId);
+});
+visual.addEventListener('pointermove',e=>{
+  if(!dragging)return;
+  rotationY+=(e.clientX-startX)*.7;
+  rotationX-=(e.clientY-startY)*.4;
+  rotationX=Math.max(-18,Math.min(18,rotationX));
+  startX=e.clientX;startY=e.clientY;
+  bottle.style.animation='none';
+  bottle.style.transform=`rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+});
+visual.addEventListener('pointerup',()=>dragging=false);
+visual.addEventListener('pointercancel',()=>dragging=false);
+</script>
 </body>
 </html>
