@@ -4,56 +4,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ÉLÉA PARFUMS — The Art of Being Remembered</title>
+<title>ÉLÉA PARFUMS | The Art of Being Remembered</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
 
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#f6f1e8;color:#342b24;font-family:'DM Sans',sans-serif}
-header{height:88px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e8dfd1}
-.logo{font-family:'Cormorant Garamond',serif;font-size:27px;letter-spacing:5px}
+
+body{
+  background:#f6f1e8;
+  color:#382e25;
+  font-family:'DM Sans',sans-serif;
+}
+
+header{
+  height:88px;
+  padding:0 8%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #e9e0d2;
+}
+
+.logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:29px;
+  letter-spacing:6px;
+}
+
 nav{display:flex;gap:35px}
-nav a,.menu a{color:#51463a;text-decoration:none;font-size:11px;letter-spacing:2px}
-.menu{display:flex;gap:24px}
-.hero{min-height:calc(100vh - 88px);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:50px 9%;overflow:hidden}
-.copy{padding-left:5%;z-index:2}
-.eyebrow{font-size:10px;letter-spacing:4px;color:#a78c61;margin-bottom:28px}
-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(58px,7vw,100px);font-weight:400;line-height:.94;letter-spacing:-2px}
-h1 em{font-weight:400;color:#a88b5c}
-.description{max-width:370px;font-size:13px;line-height:2;color:#827568;margin:30px 0}
-.button{display:inline-block;padding:16px 30px;background:#a88b5c;color:white;text-decoration:none;font-size:10px;letter-spacing:2px;transition:.3s}
-.button:hover{background:#78603c;transform:translateY(-2px)}
-.visual{height:580px;display:flex;align-items:center;justify-content:center;position:relative;perspective:1100px}
-.glow{position:absolute;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle,#e9ddc7 0%,#f1e9dc 48%,transparent 72%)}
-.bottle-wrap{width:230px;height:390px;position:relative;z-index:2;transform-style:preserve-3d;cursor:grab;animation:float 5s ease-in-out infinite;transition:transform .15s ease-out}
-.bottle-wrap:active{cursor:grabbing}
-.bottle{position:absolute;bottom:0;left:15px;width:200px;height:285px;border-radius:30px 30px 24px 24px;background:linear-gradient(100deg,rgba(255,255,255,.8),rgba(220,207,185,.35) 22%,rgba(255,255,255,.65) 48%,rgba(191,169,135,.25) 75%,rgba(255,255,255,.7));border:1px solid rgba(174,151,116,.65);box-shadow:inset 8px 0 15px rgba(255,255,255,.8),inset -8px 0 18px rgba(150,125,90,.12),0 30px 45px rgba(87,66,38,.16);transform:translateZ(12px)}
-.bottle:before{content:"";position:absolute;left:12px;top:18px;width:12px;height:225px;border-radius:20px;background:rgba(255,255,255,.5);filter:blur(5px)}
-.bottle:after{content:"";position:absolute;left:0;right:0;bottom:0;height:35px;background:linear-gradient(90deg,rgba(177,151,111,.2),rgba(255,255,255,.7),rgba(177,151,111,.2));border-radius:0 0 24px 24px}
-.neck{position:absolute;bottom:280px;left:83px;width:64px;height:38px;background:linear-gradient(90deg,#9d7a45,#f5e4b8,#b28d54);border:1px solid #b99a65;transform:translateZ(10px)}
-.cap{position:absolute;bottom:315px;left:68px;width:94px;height:70px;border-radius:9px 9px 5px 5px;background:linear-gradient(90deg,#927044,#e7d2a1 30%,#fff0ca 52%,#b18b50 100%);box-shadow:inset 5px 0 8px rgba(255,255,255,.5),0 8px 12px rgba(70,50,20,.18);transform:translateZ(12px)}
-.label{position:absolute;top:100px;left:20px;width:160px;text-align:center;padding:23px 5px 17px;border-top:1px solid rgba(169,139,89,.6);border-bottom:1px solid rgba(169,139,89,.6);transform:translateZ(15px);background:rgba(246,241,232,.32)}
-.label strong{display:block;font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;letter-spacing:4px}
-.label span{display:block;font-size:7px;letter-spacing:3px;margin-top:9px;color:#8e7650}
-.shadow{position:absolute;bottom:35px;width:250px;height:32px;background:rgba(89,67,40,.16);filter:blur(18px);border-radius:50%}
-.side-text{position:absolute;right:1%;bottom:60px;writing-mode:vertical-rl;font-size:9px;letter-spacing:4px;color:#a28b6c}
-.scroll{position:absolute;bottom:30px;left:9%;font-size:9px;letter-spacing:3px;color:#9c8b77}
-@keyframes float{0%,100%{translate:0 0}50%{translate:0 -13px}}
+nav a{
+  text-decoration:none;
+  color:#665747;
+  font-size:10px;
+  letter-spacing:2px;
+}
+
+.discover{
+  font-size:10px;
+  letter-spacing:2px;
+  color:#927448;
+}
+
+.hero{
+  min-height:calc(100vh - 88px);
+  display:grid;
+  grid-template-columns: .9fr 1.1fr;
+  align-items:center;
+  padding:35px 8%;
+  gap:25px;
+}
+
+.copy{padding-left:4%;z-index:2}
+
+.eyebrow{
+  font-size:10px;
+  letter-spacing:4px;
+  color:#a78a5c;
+  margin-bottom:27px;
+}
+
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(62px,7vw,100px);
+  font-weight:400;
+  line-height:.91;
+  letter-spacing:-2px;
+}
+
+h1 em{color:#a88b5c;font-weight:400}
+
+.description{
+  max-width:370px;
+  color:#847668;
+  font-size:13px;
+  line-height:2;
+  margin:30px 0;
+}
+
+.button{
+  display:inline-block;
+  padding:17px 30px;
+  background:#a88b5c;
+  color:white;
+  text-decoration:none;
+  font-size:10px;
+  letter-spacing:2px;
+  transition:.3s;
+}
+
+.button:hover{background:#806641}
+
+.visual{
+  height:min(690px,78vh);
+  min-height:450px;
+  position:relative;
+  overflow:hidden;
+  border-radius:3px;
+  background:
+    radial-gradient(ellipse at 50% 42%,#eee4d3 0%,#f4eee4 44%,#f6f1e8 78%);
+}
+
+#perfume{
+  width:100%;
+  height:100%;
+  display:block;
+  touch-action:pan-y;
+  cursor:grab;
+}
+
+#perfume:active{cursor:grabbing}
+
+.hint{
+  position:absolute;
+  bottom:25px;
+  left:0;
+  right:0;
+  text-align:center;
+  font-size:9px;
+  letter-spacing:3px;
+  color:#9a876d;
+  pointer-events:none;
+}
+
+.side-note{
+  position:absolute;
+  right:17px;
+  top:50%;
+  transform:translateY(-50%);
+  writing-mode:vertical-rl;
+  font-size:9px;
+  letter-spacing:3px;
+  color:#a18c70;
+  pointer-events:none;
+}
+
 @media(max-width:760px){
-header{height:72px;padding:0 6%}
-nav{display:none}
-.logo{font-size:21px}
-.hero{grid-template-columns:1fr;padding:65px 7% 30px;text-align:center}
-.copy{padding:0}
-.description{margin:25px auto}
-.visual{height:460px;grid-row:1}
-.bottle-wrap{transform:scale(.85)}
-.glow{width:310px;height:310px}
-.side-text,.scroll{display:none}
+  header{height:72px;padding:0 6%}
+  nav{display:none}
+  .logo{font-size:23px}
+  .hero{
+    grid-template-columns:1fr;
+    padding:35px 6% 25px;
+    gap:0;
+  }
+  .visual{
+    grid-row:1;
+    height:470px;
+    min-height:0;
+  }
+  .copy{
+    text-align:center;
+    padding:30px 0 20px;
+  }
+  h1{font-size:68px}
+  .description{margin:22px auto}
+  .side-note{display:none}
 }
 </style>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+  }
+}
+</script>
 </head>
+
 <body>
+
 <header>
   <div class="logo">ÉLÉA</div>
   <nav>
@@ -61,56 +182,292 @@ nav{display:none}
     <a href="#story">OUR STORY</a>
     <a href="#contact">CONTACT</a>
   </nav>
-  <div class="menu"><a href="#collection">DISCOVER</a></div>
+  <div class="discover">DISCOVER</div>
 </header>
 
 <main class="hero" id="story">
+
   <section class="copy">
     <div class="eyebrow">THE ESSENCE OF ELEGANCE</div>
-    <h1>The Art of<br><em>Being</em><br>Remembered.</h1>
-    <p class="description">A fragrance is more than a scent. It is a memory, an emotion, a quiet expression of who you are.</p>
-    <a class="button" href="#collection">DISCOVER THE SCENT &nbsp; ↗</a>
+
+    <h1>
+      The Art of<br>
+      <em>Being</em><br>
+      Remembered.
+    </h1>
+
+    <p class="description">
+      A fragrance is more than a scent.
+      It is a memory, an emotion,
+      a quiet expression of who you are.
+    </p>
+
+    <a class="button" href="#collection">
+      DISCOVER THE SCENT &nbsp; ↗
+    </a>
   </section>
 
   <section class="visual" id="collection">
-    <div class="glow"></div>
-    <div class="shadow"></div>
-    <div class="bottle-wrap" id="bottle">
-      <div class="cap"></div>
-      <div class="neck"></div>
-      <div class="bottle">
-        <div class="label">
-          <strong>ÉLÉA</strong>
-          <span>PARFUMS</span>
-          <span>EAU DE PARFUM</span>
-        </div>
-      </div>
-    </div>
-    <div class="side-text">A SIGNATURE OF YOUR OWN</div>
+    <canvas id="perfume"></canvas>
+    <div class="side-note">A SIGNATURE OF YOUR OWN</div>
+    <div class="hint">DRAG TO EXPLORE &nbsp; ✦</div>
   </section>
+
 </main>
-<div class="scroll">SCROLL TO EXPLORE &nbsp; ↓</div>
 
-<script>
-const bottle=document.getElementById('bottle');
-const visual=document.querySelector('.visual');
-let dragging=false,startX=0,startY=0,rotationY=0,rotationX=0;
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-visual.addEventListener('pointerdown',e=>{
-  dragging=true;startX=e.clientX;startY=e.clientY;
-  visual.setPointerCapture(e.pointerId);
+const canvas = document.querySelector('#perfume');
+const container = canvas.parentElement;
+
+const scene = new THREE.Scene();
+scene.background = null;
+
+const camera = new THREE.PerspectiveCamera(
+  32,
+  container.clientWidth / container.clientHeight,
+  0.1,
+  100
+);
+camera.position.set(0, 1.1, 7.4);
+
+const renderer = new THREE.WebGLRenderer({
+  canvas,
+  alpha:true,
+  antialias:true,
+  powerPreference:'high-performance'
 });
-visual.addEventListener('pointermove',e=>{
-  if(!dragging)return;
-  rotationY+=(e.clientX-startX)*.7;
-  rotationX-=(e.clientY-startY)*.4;
-  rotationX=Math.max(-18,Math.min(18,rotationX));
-  startX=e.clientX;startY=e.clientY;
-  bottle.style.animation='none';
-  bottle.style.transform=`rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+renderer.setSize(container.clientWidth,container.clientHeight);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.15;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+const pmrem = new THREE.PMREMGenerator(renderer);
+const environment = new RoomEnvironment();
+scene.environment = pmrem.fromScene(environment).texture;
+environment.dispose();
+pmrem.dispose();
+
+scene.add(new THREE.HemisphereLight(0xffffff,0xb9a58a,2));
+
+const keyLight = new THREE.DirectionalLight(0xfff4df,3.5);
+keyLight.position.set(-3,5,5);
+scene.add(keyLight);
+
+const rimLight = new THREE.DirectionalLight(0xffffff,4);
+rimLight.position.set(4,3,-3);
+scene.add(rimLight);
+
+const group = new THREE.Group();
+scene.add(group);
+
+// شیشه اصلی بطری
+const glassMaterial = new THREE.MeshPhysicalMaterial({
+  color:0xffffff,
+  metalness:0,
+  roughness:0.055,
+  transmission:0.97,
+  thickness:0.65,
+  ior:1.45,
+  transparent:false,
+  envMapIntensity:1.5,
+  clearcoat:1,
+  clearcoatRoughness:0.04
 });
-visual.addEventListener('pointerup',()=>dragging=false);
-visual.addEventListener('pointercancel',()=>dragging=false);
+
+// فرم نرم و منحنی بدنه
+const profile = [
+  new THREE.Vector2(0,0),
+  new THREE.Vector2(0.48,0),
+  new THREE.Vector2(0.60,0.035),
+  new THREE.Vector2(0.67,0.12),
+  new THREE.Vector2(0.67,1.10),
+  new THREE.Vector2(0.64,1.20),
+  new THREE.Vector2(0.48,1.32),
+  new THREE.Vector2(0.30,1.39),
+  new THREE.Vector2(0.27,1.47),
+  new THREE.Vector2(0.27,1.68),
+  new THREE.Vector2(0,1.68)
+];
+
+const bodyGeometry = new THREE.LatheGeometry(profile,128);
+bodyGeometry.computeVertexNormals();
+
+const bottle = new THREE.Mesh(bodyGeometry,glassMaterial);
+bottle.position.y=-0.9;
+group.add(bottle);
+
+// مایع طلایی داخل شیشه
+const liquidProfile = [
+  new THREE.Vector2(0,0.07),
+  new THREE.Vector2(0.52,0.07),
+  new THREE.Vector2(0.59,0.12),
+  new THREE.Vector2(0.59,0.72),
+  new THREE.Vector2(0.57,0.74),
+  new THREE.Vector2(0,0.74)
+];
+
+const liquidGeometry = new THREE.LatheGeometry(liquidProfile,96);
+
+const liquidMaterial = new THREE.MeshPhysicalMaterial({
+  color:0xd7b879,
+  metalness:0,
+  roughness:0.16,
+  transmission:0.25,
+  thickness:0.4,
+  ior:1.33,
+  transparent:true,
+  opacity:0.78
+});
+
+const liquid = new THREE.Mesh(liquidGeometry,liquidMaterial);
+liquid.position.y=-0.9;
+group.add(liquid);
+
+// گردن شیشه
+const neck = new THREE.Mesh(
+  new THREE.CylinderGeometry(0.27,0.27,0.22,96),
+  glassMaterial
+);
+neck.position.y=0.86;
+group.add(neck);
+
+// حلقه طلایی زیر در
+const gold = new THREE.MeshPhysicalMaterial({
+  color:0xc4a365,
+  metalness:0.88,
+  roughness:0.19,
+  envMapIntensity:1.8
+});
+
+const ring = new THREE.Mesh(
+  new THREE.CylinderGeometry(0.29,0.29,0.10,96),
+  gold
+);
+ring.position.y=1.02;
+group.add(ring);
+
+// در فلزی طلایی
+const cap = new THREE.Mesh(
+  new THREE.CylinderGeometry(0.31,0.30,0.58,96),
+  new THREE.MeshPhysicalMaterial({
+    color:0xd6bb88,
+    metalness:0.92,
+    roughness:0.16,
+    clearcoat:1
+  })
+);
+cap.position.y=1.36;
+group.add(cap);
+
+// خطوط ظریف روی در
+const capTop = new THREE.Mesh(
+  new THREE.CylinderGeometry(0.305,0.305,0.025,96),
+  gold
+);
+capTop.position.y=1.655;
+group.add(capTop);
+
+// برچسب بطری با نوشته واقعی
+const labelCanvas = document.createElement('canvas');
+labelCanvas.width=512;
+labelCanvas.height=256;
+const ctx=labelCanvas.getContext('2d');
+
+ctx.fillStyle='#f5efe4';
+ctx.fillRect(0,0,512,256);
+
+ctx.strokeStyle='#b99a68';
+ctx.lineWidth=3;
+ctx.strokeRect(12,12,488,232);
+
+ctx.fillStyle='#514333';
+ctx.textAlign='center';
+ctx.font='54px Georgia';
+ctx.fillText('ÉLÉA',256,112);
+
+ctx.font='20px Arial';
+ctx.letterSpacing='7px';
+ctx.fillText('PARFUMS',256,153);
+
+ctx.font='15px Arial';
+ctx.fillStyle='#a0875f';
+ctx.fillText('EAU DE PARFUM',256,193);
+
+const labelTexture = new THREE.CanvasTexture(labelCanvas);
+labelTexture.colorSpace=THREE.SRGBColorSpace;
+
+const label = new THREE.Mesh(
+  new THREE.PlaneGeometry(0.98,0.49),
+  new THREE.MeshBasicMaterial({
+    map:labelTexture,
+    transparent:true,
+    side:THREE.DoubleSide
+  })
+);
+label.position.set(0, -0.08, 0.676);
+group.add(label);
+
+// پایه ظریف صحنه
+const floor = new THREE.Mesh(
+  new THREE.CircleGeometry(1.5,80),
+  new THREE.MeshBasicMaterial({
+    color:0xe6d8c2,
+    transparent:true,
+    opacity:0.32
+  })
+);
+floor.rotation.x=-Math.PI/2;
+floor.position.y=-0.94;
+scene.add(floor);
+
+// کنترل چرخش با موس و لمس
+const controls = new OrbitControls(camera,renderer.domElement);
+controls.target.set(0,0.1,0);
+controls.enableDamping=true;
+controls.dampingFactor=0.055;
+controls.enablePan=false;
+controls.enableZoom=false;
+controls.minPolarAngle=Math.PI/2.3;
+controls.maxPolarAngle=Math.PI/1.8;
+controls.autoRotate=true;
+controls.autoRotateSpeed=0.65;
+
+const clock = new THREE.Clock();
+
+function animate(){
+  requestAnimationFrame(animate);
+  const t=clock.getElapsedTime();
+
+  if(!controls.enabled) return;
+
+  group.position.y=Math.sin(t*0.8)*0.045;
+
+  controls.update();
+  renderer.render(scene,camera);
+}
+
+animate();
+
+// هماهنگی با اندازه صفحه
+function resize(){
+  const w=container.clientWidth;
+  const h=container.clientHeight;
+
+  camera.aspect=w/h;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(w,h);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+}
+
+new ResizeObserver(resize).observe(container);
 </script>
+
 </body>
 </html>
